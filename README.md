@@ -63,7 +63,7 @@ Proxy IP Pool Crawler 是一个多源免费代理 IP 爬取与验证工具。系
 
 ### 完整流程（爬取 + 验证）
 ```bash
-python 重写.py
+python main.py
 ```
 
 运行后系统会：
@@ -74,19 +74,19 @@ python 重写.py
 
 ### 单独验证已有代理列表
 ```bash
-python 2024.py
+python verify_proxy.py
 ```
 
 ### 测试 CheckerProxy 源
 ```bash
-python Try.py
+python test_checker.py
 ```
 
 ## 项目结构
 
 ```
 proxy-ip-pool/
-├── 重写.py              # 主程序（223行）：6 源爬取 + 多线程验证
+├── main.py              # 主程序（223行）：6 源爬取 + 多线程验证
 │   ├── 八九IP()          # 89IP 代理源
 │   ├── 快代理()          # 快代理网页爬取
 │   ├── 稻壳代理()        # 稻壳代理 JSON API
@@ -94,8 +94,8 @@ proxy-ip-pool/
 │   ├── proxyscrape()    # ProxyScrape API
 │   ├── Checking_roxy_servers()  # CheckerProxy API
 │   └── verify_proxy()   # 多线程代理验证
-├── 2024.py              # 独立代理验证脚本（54行）
-├── Try.py               # CheckerProxy 测试脚本（12行）
+├── verify_proxy.py      # 独立代理验证脚本（54行）
+├── test_checker.py      # CheckerProxy 测试脚本（12行）
 ├── assets/
 │   └── logo.svg         # 项目 Logo
 ├── LICENSE              # MIT 许可证
